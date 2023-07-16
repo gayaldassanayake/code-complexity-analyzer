@@ -1,0 +1,5 @@
+[plugin]
+class = "io.gayal.complexity.CodeComplexityAnalyzerPlugin"
+
+[[dependency]]
+path = "/Users/gayaldassanayake/Documents/devrel/code-complexity-analyzer/CodeComplexityAnalyzer/build/libs/CodeComplexityAnalyzer-1.0-SNAPSHOT.jar"

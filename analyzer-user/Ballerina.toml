@@ -1,0 +1,14 @@
+[package]
+org = "gayaldassanayake"
+name = "analyzer_user"
+version = "0.1.0"
+distribution = "2201.7.0-20230622-064700-4a2dc6dd"
+
+[[dependency]]
+org = "gayaldassanayake"
+name = "code_complexity_analyzer"
+version = "0.3.0"
+repository = "local"
+
+[build-options]
+observabilityIncluded = true
