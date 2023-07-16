@@ -12,6 +12,8 @@ public function main() {
        io:println("3");
     }
     funcMatch();
+    funcForLoop();
+    funcWhileLoop();
 }
 
 function func1() returns boolean {
@@ -31,5 +33,20 @@ function funcMatch() {
         2 => { io:println("2"); }
         3 => { io:println("3"); }
         _ => { io:println("default"); }
+    }
+}
+
+function funcForLoop() {
+    int x = 1;
+    foreach int i in x...10 {
+        int y = x + 1;
+    }
+}
+
+function funcWhileLoop() {
+    int x = 1;
+    while x < 10 {
+        x +=1
+        int y = x + 1;
     }
 }
