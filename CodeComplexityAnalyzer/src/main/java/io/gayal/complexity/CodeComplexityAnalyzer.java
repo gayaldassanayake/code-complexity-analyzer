@@ -12,10 +12,19 @@ public class CodeComplexityAnalyzer extends CodeAnalyzer {
         //  2. code duplication
         //  3. LOC
         //  4. Code maintainability
-
-        System.out.println("** Code Complexity Analyzer **");
-        System.out.println("1. Cyclomatic Complexity");
         codeAnalysisContext.addSyntaxNodeAnalysisTask(new CodeComplexityAnalysisTask(), SyntaxKind.FUNCTION_DEFINITION);
-        codeAnalysisContext.addCompilationAnalysisTask(new LinesOfCodeAnalysisTask());
+        printReportHeader();
+    }
+
+    private void printReportHeader() {
+        String title = "Complexity Report";
+        String[] headerLine1 = {"File Name", "Function Name", "Cyclomatic", "Lines of Code", "Code",
+                "Code"};
+        String[] headerLine2 = {"", "", "Complexity", "", "Duplication", "Maintainability"};
+        System.out.println(title);
+        System.out.println("-".repeat(110));
+        System.out.println(String.format("%-20s|%-20s|%-15s|%-15s|%-15s|%-15s", (Object[]) headerLine1));
+        System.out.println(String.format("%-20s|%-20s|%-15s|%-15s|%-15s|%-15s", (Object[]) headerLine2));
+        System.out.println("-".repeat(110));
     }
 }
