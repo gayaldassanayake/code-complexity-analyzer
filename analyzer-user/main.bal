@@ -2,18 +2,21 @@ import ballerina/io;
 import gayaldassanayake/code_complexity_analyzer as _;
 
 public function main() {
-    boolean x = func1() || func2();
     int y = 1;
-    if y == 1 {
-        io:println("1");
-    } else if y == 2 {
-        io:println("2");
+    if y > 0 {
+        io:println("Positive");
+        if y == 1 {
+            io:println("The smallest positive number");
+        }
+    } else if y < 0 {
+        io:println("Negative");
     } else {
-       io:println("3");
+        io:println("Zero");
     }
-    funcMatch();
-    funcForLoop();
-    funcWhileLoop();
+}
+
+function funcLogicalOr() returns boolean {
+    return func1() || func2();
 }
 
 function func1() returns boolean {
@@ -46,6 +49,10 @@ function funcForLoop() {
 function funcWhileLoop() {
     int x = 1;
     while x < 10 {
+        int a = 1;
+        while a < 10 {
+            a += 1;
+        }
         x +=1;
         int y = x + 1;
     }
